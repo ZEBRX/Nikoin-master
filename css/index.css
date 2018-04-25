@@ -1,3 +1,10 @@
+@-moz-document url-prefix() {
+    
+    #container
+    {
+        width: 100vw;
+    }
+}
 .imgHeader
 {
 	width: 51%;
@@ -164,6 +171,15 @@ body
     width: 60%;
     padding-top: 18%;
 }
+.assopub {
+
+    -webkit-transition: all .4s ;
+}
+
+.assopub:hover {
+
+    -webkit-transform: scale(1.2);
+}
 footer
 {
     padding-top: 5%;
@@ -185,12 +201,41 @@ footer
     -o-transform:scale(1.1); /* Opera */
     transform:scale(1.1);
 }
+.fixedtop
+{
+	position: fixed;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff00;
+    border: 5px solid #50c3c585;
+    border-radius: 50%;
+    z-index: 1;
+    margin-left: 90vw;
+    margin-top: 75vh;
+}
+.fixedtop:hover
+{
+    border: 5px solid #50c3c5;
+}
+.fixedimg
+{
+	width: 75%;
+    padding-top: 10%;
+}
+
 
 @media only screen and (min-width: 501px){
 
     .small_screen{
         display: none ;
     }
+    .btngo
+{
+    border-radius: 50px; 
+    height: 52px;
+    -webkit-appearance:button;cursor:pointer;
+}
 }
 
 
@@ -311,7 +356,8 @@ footer
     #socialNavMobile
     {
         display: inline-block;
-        width: auto;margin-right: 25%;margin-top: 2%; 
+        width: auto;margin-right: 33%;
+        margin-top: 2%; 
 
     }
     #featureBlk
@@ -332,6 +378,10 @@ footer
     }
 
     .big_screen
+    {
+        display: none;
+    }
+    .fixedtop
     {
         display: none;
     }
@@ -410,7 +460,10 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
-
+{
+    border-radius: 50px; 
+    height: 52px;
+}
 /* The Modal (background) */
 #id01 {
     display: none; /* Hidden by default */
@@ -440,17 +493,41 @@ span.psw {
 }
 
 /* Modal Content/Box */
-#deskhr {
+#deskhr1 {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
 }
-#mobonly {
+#mobonly2 {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 100%; /* Could be more or less, depending on screen size */
+    width: 4%; /* Could be more or less, depending on screen size */
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
+}
+#deskhr2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+#mobonly2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 4%; /* Could be more or less, depending on screen size */
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
 }
 
 /* The Close Button (x) */
@@ -481,6 +558,7 @@ span.psw {
 
     .mobonly{
         display:block ;
+        top:20vh;
     }
     .deskhr{
         display:none;
@@ -491,11 +569,43 @@ span.psw {
 
     .mobonly{
         display:none ;
+        top:20vh;
     }
     .deskhr{
         display:block;
     }
+    #presentationResponsive
+    {
+    left: -30%;
+    width: 75vw;
+    }
 
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    iframe {
+        height: 500
+    }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2)
+{
+    #presentationResponsive
+{
+    left: 0%;
+    width: 75vw;
+}
+#socialNavMobile
+    {
+        display: inline-block;
+        width: auto;margin-right: 33%;
+        margin-top: 2%; 
+
+    }
 }
 
 
@@ -504,4 +614,111 @@ span.psw {
     display: flex;
     flex-direction: column;
 
+}
+@media only screen and (min-width: 1025px){
+#presentationResponsive
+{
+    left: -30%;
+    width: 75vw;
+}
+{
+    border-radius: 50px; 
+    height: 52px;
+}
+
+}
+body             { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+
+
+/* form starting stylings ------------------------------- */
+.group             {
+    position:relative;
+    margin-bottom:45px;
+}
+input           {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+input:focus       { outline:none; }
+
+/* LABEL ======================================= */
+label            {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label      {
+    top:-20px;
+    font-size:14px;
+    color:#000;
+}
+
+/* BOTTOM BARS ================================= */
+.bar   { position:relative; display:block; width:300px; }
+.bar:before, .bar:after    {
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#000;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to     { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to     { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to     { width:0; background:transparent; }
 }
